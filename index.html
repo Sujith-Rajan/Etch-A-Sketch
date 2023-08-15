@@ -10,9 +10,11 @@
     <div id="main-container">
         <div id="controls">
             <h1>Etch A Sketch</h1>
-            <p>color picker</p>
-            <button type="submit" onclick="createGrid(16)">grid genereate</button>
-            <p>sizing</p>
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            <button type="submit" onclick="createGrid(20)">grid genereate</button><br>
+            <input type="range" min="1" max="64" value="64"><br>
+            <button type="submit" id="eraser" onclick="erasePixal()">Erase</button>
         </div>
         <div id="grid-container">
               <div class="grid"></div>

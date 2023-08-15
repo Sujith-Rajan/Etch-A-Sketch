@@ -1,4 +1,5 @@
 const gridContainer =document.querySelector("#grid-container")
+const colorPick = document.querySelector("#favcolor")
 
 function createGrid(size){
     gridContainer.innerHTML = '';
@@ -10,8 +11,17 @@ function createGrid(size){
         cells.classList.add('grid');
         gridContainer.appendChild(cells);
         cells.addEventListener('mouseover',(action)=>{
-            cells.style.backgroundColor ='black';
+            cells.style.backgroundColor =colorPick.value;
         })
 
     }
+}
+
+function erasePixal(){
+    const cellErase = document.querySelectorAll(".grid");
+    cellErase.forEach((cell) => {
+        cell.addEventListener('mouseover', () => {
+            cell.style.backgroundColor = ' #bce67d';
+        });
+    });
 }
