@@ -25,3 +25,12 @@ function erasePixal(){
         });
     });
 }
+let rangeInput = document.querySelector("#grid-range");
+let rangeLabel = document.getElementById("range-label");
+rangeInput.addEventListener("input",function(){
+
+    let gridSizeValue = rangeInput.value;
+    rangeLabel.textContent = gridSizeValue + "*" + gridSizeValue ;
+    createGrid(gridSizeValue);
+
+});

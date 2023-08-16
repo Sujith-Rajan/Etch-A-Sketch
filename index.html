@@ -12,8 +12,9 @@
             <h1>Etch A Sketch</h1>
             <label for="favcolor">Select your favorite color:</label>
             <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-            <button type="submit" onclick="createGrid(20)">grid genereate</button><br>
-            <input type="range" min="1" max="64" value="64"><br>
+            <!-- <button type="submit" onclick="createGrid(20)">grid genereate</button><br> -->
+            <input type="range" min="1" max="64" value="16" id="grid-range" name="grid-range">
+            <span id="range-label">16*16</span> <br>
             <button type="submit" id="eraser" onclick="erasePixal()">Erase</button>
         </div>
         <div id="grid-container">
